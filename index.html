@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JBLab crea sistemi digitali che lavorano per te: siti, automazioni e flussi smart per aziende e freelance. Scopri cosa posso fare per te." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Jadir Boulahfa" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>JBLab — Sistemi digitali su misura</title>
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jblab.it/">
+<meta property="og:title" content="JBLab — Sistemi digitali su misura">
+<meta property="og:description" content="Creo siti, automazioni e flussi smart. Tu pensa in grande. Al resto ci pensa JBLab.">
+<meta property="og:image" content="https://www.jblab.it/jblab-preview.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.jblab.it/">
+<meta property="twitter:title" content="JBLab — Sistemi digitali su misura">
+<meta property="twitter:description" content="Creo siti, automazioni e flussi smart. Tu pensa in grande. Al resto ci pensa JBLab.">
+<meta property="twitter:image" content="https://www.jblab.it/jblab-preview.jpg">
+
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="tech-bg"></div>
+
+
+  <div id="binary-trail"></div>
+
+
+  <header class="navbar">
+<div class="logo" onclick="resetToHome()">JBLab</div>
+
+<div class="menu-toggle" onclick="toggleMobileMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+
+
+    <nav class="menu">
+      <a data-target="about">Chi sono</a>
+      <a data-target="servizi">Servizi</a>
+      <a data-target="projects">Progetti</a>
+      <a data-target="contact">Contatti</a>
+    </nav>
+  </header>
+
+  <!-- Section wrapper -->
+  <main class="panel-wrapper">
+  <section id="home" class="panel">
+  <div class="home-hero">
+    <div id="lottie-home" class="lottie-box"></div>
+    <h1 class="home-title">
+      Costruisco <span class="highlight">sistemi digitali</span><br>
+      che lavorano <span class="highlight">al posto tuo</span>.
+    </h1>
+
+    <p class="home-subtitle">
+      Siti. Automazioni. Flussi smart.<br>
+      Tu pensa in grande. Al resto ci pensa JBLab.
+    </p>
+
+   <div class="home-buttons">
+  <button class="start-btn" onclick="showPanel('servizi')">
+    <i class="fas fa-brain"></i> Scopri cosa faccio
+  </button>
+  <a class="cta-contact-btn" onclick="showPanel('contact')">
+    <i class="fas fa-comments"></i> Parliamone
+  </a>
+</div>
+
+  </div>
+</section>
+
+
+<section id="about" class="panel">
+  <div class="about-layout">
+    <div class="about-text">
+      <h2>Non nasco digitale.</h2>
+      <p class="subtitle-about">
+        Ma oggi creo sistemi digitali che lavorano davvero.
+      </p>
+      <p>
+        Mi chiamo Jadir. Ho iniziato in officina, con le mani sporche di grasso e progetti da tradurre in meccanica pura.
+        <br /><br />
+        Oggi scrivo codice. Ma ho mantenuto lo stesso approccio: costruire cose che servono. 
+        Funzionali, pulite, automatizzate.
+        <br /><br />
+        JBLab è il mio modo per restituire valore concreto a chi vuole ottimizzare, digitalizzare, semplificare. 
+        Lavoro per aziende e freelance che hanno bisogno di meno caos, più controllo.
+      </p>
+      <ul class="about-highlights">
+        <li><i class="fas fa-wrench"></i> Mentalità ingegneristica</li>
+        <li><i class="fas fa-bolt"></i> Soluzioni rapide, zero fronzoli</li>
+        <li><i class="fas fa-code"></i> Full Stack: dal design al deploy</li>
+        <li><i class="fas fa-robot"></i> Automazioni intelligenti</li>
+      </ul>
+    </div>
+    <div class="about-photo">
+      <img src="jadir-coding.jpg" alt="Jadir al lavoro su un progetto" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="servizi" class="panel">
+  <h2>Servizi</h2>
+  <p class="home-subtitle">Soluzioni su misura per chi vuole lavorare meglio. Niente fronzoli, solo sistemi che funzionano.</p>
+
+  <div class="cards">
+    
+    <div class="card reveal" onclick="toggleDescription(this)">
+      <h3><i class="fas fa-database icon-glow"></i> Digitalizzazione</h3>
+      <div class="card-summary">Snelliamo. Automatizziamo. Rendi il tuo lavoro più veloce.</div>
+      <div class="card-detail">
+        Eliminiamo la carta, i file duplicati e le operazioni lente. Progetto strumenti su misura per gestire clienti, preventivi, documenti e attività — tutto digitale, tutto sotto controllo.
+        <br><br>
+        <strong>Risultato?</strong> Meno errori, meno fatica. Più tempo per ciò che conta.
+      </div>
+    </div>
+
+    <div class="card reveal" onclick="toggleDescription(this)">
+      <h3><i class="fas fa-globe icon-glow"></i> Siti & Landing</h3>
+      <div class="card-summary">Non solo belli. Costruiti per farti guadagnare.</div>
+      <div class="card-detail">
+        Creo siti moderni, rapidi e ottimizzati per convertire. Landing page che colpiscono, navigazione fluida, testi che vendono. Design personalizzato, hosting incluso, tutto pronto per partire.
+        <br><br>
+        <strong>Risultato?</strong> Una presenza online solida, professionale, efficace.
+      </div>
+    </div>
+
+    <div class="card reveal" onclick="toggleDescription(this)">
+     <h3><i class="fas fa-robot icon-glow"></i> Automazioni</h3>
+      <div class="card-summary">Fai di più. Senza fare tutto tu.</div>
+      <div class="card-detail">
+        Automatizzo processi noiosi e ripetitivi: email, report, notifiche, integrazioni tra strumenti. Dimezziamo i tempi, eliminiamo errori, ti liberi dai compiti che ti bloccano.
+        <br><br>
+        <strong>Risultato?</strong> Ogni giorno lavori meno. E ottieni di più.
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+  <p class="quote-line">Il tempo è la tua risorsa più preziosa.</p>
+  <p class="quote-line">Io costruisco sistemi che te ne restituiscono, ogni giorno.</p>
+</div>
+    </section>
+
+    <section id="projects" class="panel">
+  <h2>Progetti</h2>
+  <p class="home-subtitle">Ogni progetto è un sistema costruito per funzionare. Con stile, velocità, risultati.</p>
+
+  <div class="grid">
+    
+    <!-- Progetto Home Lab Selfhostato -->
+<div class="project reveal">
+  <img src="homelab-project.jpg" alt="Progetto Home Lab Selfhostato" loading="lazy" />
+  <h3>Home Lab Selfhostato</h3>
+  <p>
+    Un laboratorio domestico completamente autogestito per sperimentare con software, servizi web e automazioni locali. <strong>Tutto sotto il tuo controllo diretto.</strong>
+    <br><br>
+    <em>Risultato?</em> Privacy garantita, apprendimento continuo, indipendenza tecnologica.
+  </p>
+</div>
+
+    <div class="project reveal">
+      <img src="ristorante-site.jpg" alt="Progetto Trattoria Digitale" loading="lazy"  />
+      <h3>Trattoria Digitale</h3>
+      <p>
+        Menù online, prenotazioni istantanee, look irresistibile. Ho realizzato questo sito per un ristorante che voleva
+        <strong>automatizzare le comande</strong>, gestire i tavoli anche da smartphone e ricevere prenotazioni senza bisogno di telefonate.
+        <br><br>
+        <em>Risultato?</em> Clienti più comodi, staff più veloce, tutto sotto controllo.
+      </p>
+    </div>
+
+    <div class="project reveal">
+      <img src="personaltrainer-site.jpg" alt="Progetto CoachFlow" loading="lazy" />
+      <h3>CoachFlow</h3>
+      <p>
+        Landing page creata per un personal trainer inglese. L'obiettivo: una presenza online d'impatto, moderna, pronta a convertire.
+        <strong>Integrazione con calendari, funnel e contenuti dinamici</strong> per promuovere programmi fitness e lezioni 1:1.
+        <br><br>
+        <em>Risultato?</em> Un sistema che lavora al posto suo, anche mentre è in palestra.
+      </p>
+    </div>
+
+    <!-- Progetto Chatbot Automatico -->
+<div class="project reveal">
+  <img src="chatbot-project.png" alt="Progetto Chatbot Automatico" loading="lazy" />
+  <h3>Chatbot Automatico</h3>
+  <p>
+    Un assistente virtuale sempre attivo che risponde ai messaggi automaticamente. Ideale per aziende e freelance che vogliono <strong>fornire assistenza immediata ai clienti</strong> anche fuori orario di lavoro.
+    <br><br>
+    <em>Risultato?</em> Comunicazioni rapide, clienti soddisfatti, zero stress.
+  </p>
+</div>
+
+
+
+
+  </div>
+</section>
+
+
+   <section id="contact" class="panel reveal">
+  <h2>Contatti</h2>
+
+  <p class="contact-slogan reveal">Hai un’idea? Io ho un piano.<br>Parliamone.</p>
+
+  <form action="https://formspree.io/f/mpwlzqzj" method="POST" class="contact-form reveal">
+    <div class="row">
+      <div class="form-group">
+        <input type="text" name="nome" placeholder="Il tuo nome" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="La tua email" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group full-width">
+        <textarea name="messaggio" placeholder="Scrivi il tuo messaggio..." required></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <button type="submit">Invia messaggio</button>
+    </div>
+  </form>
+
+  <div id="thank-you-message" class="thank-you" style="display:none; text-align:center; margin-top:1rem;">
+  <p>✅ Grazie! Ti risponderò a breve.</p>
+</div>
+
+  <div class="social-icons reveal">
+    <a href="mailto:tuamail@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://t.me/iltuousername" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://linkedin.com/in/iltuoprofilo" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/iltuoinstagram" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</section>
+
+
+  </main>
+
+<footer>
+  <p>Made with ❤️ by <strong>Jadir Boulahfa</strong> · © 2025 JBLab</p>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+  <script>
+
+    // Reveal on scroll
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+    
+    // Navbar blur on scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+    
+ // Lottie nella home
+lottie.loadAnimation({
+  container: document.getElementById("lottie-home"),
+  path: "Developer.json",
+  renderer: "svg",
+  loop: true,
+  autoplay: true
+}).setSpeed(1.8);
+
+   
+ function showPanel(panelId) {
+  const panels = document.querySelectorAll('.panel');
+  const newPanel = document.getElementById(panelId);
+  const currentPanel = document.querySelector('.panel.active');
+
+  if (newPanel === currentPanel) return;
+
+  // Salva il pannello selezionato
+  localStorage.setItem('activePanel', panelId);
+
+  // Uscita del pannello attivo
+  if (currentPanel) {
+    currentPanel.classList.remove('active');
+    currentPanel.classList.remove('entered');
+    currentPanel.classList.add('exiting');
+
+    setTimeout(() => {
+      currentPanel.classList.remove('exiting');
+    }, 500);
+  }
+
+
+
+  // Entrata del nuovo pannello
+  newPanel.classList.add('entering');
+
+  setTimeout(() => {
+    newPanel.classList.remove('entering');
+    newPanel.classList.add('entered', 'active');
+  }, 10);
+}
+
+// Al caricamento della pagina, mostra il pannello salvato (se esiste) o home di default
+window.addEventListener('DOMContentLoaded', () => {
+  const savedPanel = localStorage.getItem('activePanel');
+  if (savedPanel && document.getElementById(savedPanel)) {
+    showPanel(savedPanel);
+  } else {
+    showPanel('home');
+  }
+});
+
+
+
+
+
+
+  function resetToHome() {
+  localStorage.removeItem('activePanel');
+  showPanel('home');
+}
+
+
+
+    function toggleDescription(card) {
+      document.querySelectorAll('.card').forEach(c => {
+        if (c !== card) c.classList.remove('open');
+      });
+      card.classList.toggle('open');
+    }
+
+    function toggleMobileMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('active');
+}
+
+document.addEventListener('mousemove', (e) => {
+  const digit = document.createElement('div');
+  digit.className = 'binary-digit';
+  digit.textContent = Math.random() > 0.5 ? '1' : '0';
+
+  const angle = Math.random() * 2 * Math.PI;
+  const radius = Math.random() * 25 + 10; // distanza dal cursore
+
+  const x = e.clientX + Math.cos(angle) * radius;
+  const y = e.clientY + Math.sin(angle) * radius;
+
+  digit.style.left = `${x}px`;
+  digit.style.top = `${y}px`;
+  digit.style.fontSize = `${Math.random() * 3 + 7}px`;
+  digit.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+  document.getElementById('binary-trail').appendChild(digit);
+
+  setTimeout(() => {
+    digit.remove();
+  }, 1200);
+});
+
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    const targetId = link.getAttribute('data-target');
+    showPanel(targetId);
+    document.querySelector('.menu').classList.remove('active'); // chiude il menu
+  });
+});
+
+// 1. Seleziona il form e il container del feedback
+const contactForm = document.querySelector('.contact-form');
+const thankYou = document.getElementById('thank-you-message');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // evita il reload della pagina
+
+    // 2. Invia il form tramite Fetch API a Formspree
+    const formData = new FormData(contactForm);
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        // 3. Nascondi il form e mostra il messaggio di ringraziamento
+        contactForm.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        // In caso di errore, logga sul console (puoi personalizzare un messaggio)
+        console.error('Invio form fallito:', response);
+      }
+    })
+    .catch(error => console.error('Errore di rete:', error));
+  });
+}
+
+
+  </script>
+</body>
+</html>
