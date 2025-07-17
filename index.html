@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 
-<script async defer data-domain="jaddox.github.io" src="https://plausible.io/js/plausible.js"></script>
+<script async defer data-domain="jaddox.github.io/jblab-site" src="https://plausible.io/js/plausible.js"></script>
 
 
   <meta charset="UTF-8" />
@@ -333,15 +333,15 @@ lottie.loadAnimation({
   }, 10);
 }
 
-// Al caricamento della pagina, mostra il pannello salvato (se esiste) o home di default
-window.addEventListener('DOMContentLoaded', () => {
-  const savedPanel = localStorage.getItem('activePanel');
-  if (savedPanel && document.getElementById(savedPanel)) {
-    showPanel(savedPanel);
-  } else {
+  // Al caricamento della pagina, pulisci sempre il pannello salvato e mostra la home
+  window.addEventListener('DOMContentLoaded', () => {
+    // 1) Rimuovi qualsiasi valore precedentemente salvato
+    localStorage.removeItem('activePanel');
+    // 2) Forza la visualizzazione della sezione "home"
     showPanel('home');
-  }
-});
+    // 3) (Opzionale) Rimuovi eventuali hash dall'URL
+    history.replaceState(null, '', '/jblab-site/');
+  });
 
 
 
