@@ -12,6 +12,8 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    environment:
+      name: github-pages
 
     steps:
       - name: Checkout repository
@@ -26,5 +28,4 @@ jobs:
           path: .
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
