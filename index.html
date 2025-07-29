@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 
-<script async defer data-domain="jaddox.github.io/jblab-site" src="https://plausible.io/js/plausible.js"></script>
+<script async defer data-domain="https://jaddox.github.io/jblab-site/" src="https://plausible.io/js/plausible.js"></script>
 
 
   <meta charset="UTF-8" />
@@ -30,7 +30,7 @@
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -109,7 +109,7 @@
       </ul>
     </div>
     <div class="about-photo">
-      <img src="jadir-coding.jpg" alt="Jadir al lavoro su un progetto" loading="lazy" />
+      <img src="foto/jadir-coding.jpg" alt="Jadir al lavoro su un progetto" loading="lazy" />
     </div>
   </div>
 </section>
@@ -167,7 +167,7 @@
     
     <!-- Progetto Home Lab Selfhostato -->
 <div class="project reveal">
-  <img src="homelab-project.jpg" alt="Progetto Home Lab Selfhostato" loading="lazy" />
+  <img src="foto/homelab-project.jpg" alt="Progetto Home Lab Selfhostato" loading="lazy" />
   <h3>Home Lab Selfhostato</h3>
   <p>
     Un laboratorio domestico completamente autogestito per sperimentare con software, servizi web e automazioni locali. <strong>Tutto sotto il tuo controllo diretto.</strong>
@@ -177,7 +177,7 @@
 </div>
 
     <div class="project reveal">
-      <img src="ristorante-site.jpg" alt="Progetto Trattoria Digitale" loading="lazy"  />
+      <img src="foto/ristorante-site.jpg" alt="Progetto Trattoria Digitale" loading="lazy"  />
       <h3>Trattoria Digitale</h3>
       <p>
         Menù online, prenotazioni istantanee, look irresistibile. Ho realizzato questo sito per un ristorante che voleva
@@ -188,7 +188,7 @@
     </div>
 
     <div class="project reveal">
-      <img src="personaltrainer-site.jpg" alt="Progetto CoachFlow" loading="lazy" />
+      <img src="foto/personaltrainer-site.jpg" alt="Progetto CoachFlow" loading="lazy" />
       <h3>CoachFlow</h3>
       <p>
         Landing page creata per un personal trainer inglese. L'obiettivo: una presenza online d'impatto, moderna, pronta a convertire.
@@ -200,7 +200,7 @@
 
     <!-- Progetto Chatbot Automatico -->
 <div class="project reveal">
-  <img src="chatbot-project.png" alt="Progetto Chatbot Automatico" loading="lazy" />
+  <img src="foto/chatbot-project.png" alt="Progetto Chatbot Automatico" loading="lazy" />
   <h3>Chatbot Automatico</h3>
   <p>
     Un assistente virtuale sempre attivo che risponde ai messaggi automaticamente. Ideale per aziende e freelance che vogliono <strong>fornire assistenza immediata ai clienti</strong> anche fuori orario di lavoro.
@@ -259,175 +259,8 @@
   <p>Made with ❤️ by <strong>Jadir Boulahfa</strong> · © 2025 JBLab</p>
 </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
-  <script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js" defer></script>
+<script src="js/main.js" defer></script>
 
-    // Reveal on scroll
-const revealElements = document.querySelectorAll('.reveal');
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-
-revealElements.forEach(el => revealObserver.observe(el));
-
-    
-    // Navbar blur on scroll
-window.addEventListener('scroll', () => {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 10) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-    
- // Lottie nella home
-lottie.loadAnimation({
-  container: document.getElementById("lottie-home"),
-  path: "Developer.json",
-  renderer: "svg",
-  loop: true,
-  autoplay: true
-}).setSpeed(1.8);
-
-   
- function showPanel(panelId) {
-  const panels = document.querySelectorAll('.panel');
-  const newPanel = document.getElementById(panelId);
-  const currentPanel = document.querySelector('.panel.active');
-
-  if (newPanel === currentPanel) return;
-
-  // Salva il pannello selezionato
-  localStorage.setItem('activePanel', panelId);
-
-  // Uscita del pannello attivo
-  if (currentPanel) {
-    currentPanel.classList.remove('active');
-    currentPanel.classList.remove('entered');
-    currentPanel.classList.add('exiting');
-
-    setTimeout(() => {
-      currentPanel.classList.remove('exiting');
-    }, 500);
-  }
-
-
-
-  // Entrata del nuovo pannello
-  newPanel.classList.add('entering');
-
-  setTimeout(() => {
-    newPanel.classList.remove('entering');
-    newPanel.classList.add('entered', 'active');
-  }, 10);
-}
-
-  // Al caricamento della pagina, pulisci sempre il pannello salvato e mostra la home
-  window.addEventListener('DOMContentLoaded', () => {
-    // 1) Rimuovi qualsiasi valore precedentemente salvato
-    localStorage.removeItem('activePanel');
-    // 2) Forza la visualizzazione della sezione "home"
-    showPanel('home');
-    // 3) (Opzionale) Rimuovi eventuali hash dall'URL
-    history.replaceState(null, '', '/jblab-site/');
-  });
-
-
-
-
-
-
-  function resetToHome() {
-  localStorage.removeItem('activePanel');
-  showPanel('home');
-}
-
-
-
-    function toggleDescription(card) {
-      document.querySelectorAll('.card').forEach(c => {
-        if (c !== card) c.classList.remove('open');
-      });
-      card.classList.toggle('open');
-    }
-
-    function toggleMobileMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
-}
-
-document.addEventListener('mousemove', (e) => {
-  const digit = document.createElement('div');
-  digit.className = 'binary-digit';
-  digit.textContent = Math.random() > 0.5 ? '1' : '0';
-
-  const angle = Math.random() * 2 * Math.PI;
-  const radius = Math.random() * 25 + 10; // distanza dal cursore
-
-  const x = e.clientX + Math.cos(angle) * radius;
-  const y = e.clientY + Math.sin(angle) * radius;
-
-  digit.style.left = `${x}px`;
-  digit.style.top = `${y}px`;
-  digit.style.fontSize = `${Math.random() * 3 + 7}px`;
-  digit.style.transform = `rotate(${Math.random() * 360}deg)`;
-
-  document.getElementById('binary-trail').appendChild(digit);
-
-  setTimeout(() => {
-    digit.remove();
-  }, 1200);
-});
-
-document.querySelectorAll('.menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    const targetId = link.getAttribute('data-target');
-    showPanel(targetId);
-    document.querySelector('.menu').classList.remove('active'); // chiude il menu
-  });
-});
-
-// 1. Seleziona il form e il container del feedback
-const contactForm = document.querySelector('.contact-form');
-const thankYou = document.getElementById('thank-you-message');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // evita il reload della pagina
-
-    // 2. Invia il form tramite Fetch API a Formspree
-    const formData = new FormData(contactForm);
-    fetch(contactForm.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        // 3. Nascondi il form e mostra il messaggio di ringraziamento
-        contactForm.style.display = 'none';
-        thankYou.style.display = 'block';
-      } else {
-        // In caso di errore, logga sul console (puoi personalizzare un messaggio)
-        console.error('Invio form fallito:', response);
-      }
-    })
-    .catch(error => console.error('Errore di rete:', error));
-  });
-}
-
-
-  </script>
 </body>
 </html>
